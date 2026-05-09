@@ -13,6 +13,7 @@ struct ReservationForm: View {
     @State private var numberOfGuests = 1
     @State private var numberOfChildren = 0
     @State private var occasion = ""
+    @State private var reservationConfirmed = false
     
     var body: some View {
         
@@ -54,7 +55,7 @@ struct ReservationForm: View {
                         }
                         
                         if numberOfChildren > 0 {
-                            Text("Children's menus and high are available.")
+                            Text("Children's menus and high chairs are available.")
                                 .foregroundColor(.green)
                         }
                         
@@ -62,11 +63,18 @@ struct ReservationForm: View {
                             .padding(.vertical)
                     }
                     
-                    Section{
-                        Button("Confirm Reservation") {
-                            print("Reservation Confirmed")
+                    Section {
+                        
+                        Button("Confirm Reservation"){
+                            reservationConfirmed = true
                         }
                         .disabled(name.isEmpty)
+                        
+                        if reservationConfirmed {
+                            Text("Reservation Confirmed!")
+                                .foregroundColor(.green)
+                                .fontWeight(.bold)
+                        }
                     }
                 }
                 .scrollContentBackground(.hidden)
