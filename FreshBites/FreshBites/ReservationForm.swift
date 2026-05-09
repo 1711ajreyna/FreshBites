@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ReservationForm: View {
+    @State private var name = ""
+    @State private var phoneNumber = ""
+    @State private var numberOfGuests = 1
     @State private var numberOfChildren = 0
     @State private var occasion = ""
     
@@ -24,12 +27,47 @@ struct ReservationForm: View {
             VStack(spacing:25) {
                 Text("Reservation Form").font(.largeTitle).fontWeight(.bold)
                 Form {
-                    Stepper("children: \(numberOfChildren)",value: $numberOfChildren, in: 0...5)
-                    TextField("occasion (Birthday, Anniversary, etc.", text: $occasion
-                    )
                     
-                    Text("Reservation for \(numberOfChildren) children. Occasion: \(occasion)")
-                        .padding(.vertical)
+                    Section(header: Text("Guest Information")){
+                        TextField("Name", text: $name)
+                        
+                        TextField("Phone Number", text: $phoneNumber)
+                            .keyboardType(.phonePad)
+                    }
+                    Section(header: Text("Reservation Details")){
+                        Stepper("Guests: \(numberOfGuests)", value: $numberOfGuests, in: 1...20)
+                        
+                        Stepper("Children: \(numberOfChildren)", value: $numberOfChildren, in: 0...5)
+                        
+                        TextField("Occasion (Birthday, Anniversary, etc.)", text: $occasion)
+                    }
+                    
+                    Section{
+                        if name.isEmpty || phoneNumber.isEmpty {
+                            Text("Please enter your name and phone number.")
+                                .foregroundColor(.red)
+                        }
+                        
+                        if numberOfGuests >= 8 {
+                            Text("Large group - please call ahead.")
+                                .foregroundColor(.orange)
+                        }
+                        
+                        if numberOfChildren > 0 {
+                            Text("Children's menus and high are available.")
+                                .foregroundColor(.green)
+                        }
+                        
+                        Text("Reservation for \(numberOfGuests) guests and \(numberOfChildren) children. Occasion: \(occasion)")
+                            .padding(.vertical)
+                    }
+                    
+                    Section{
+                        Button("Confirm Reservation") {
+                            print("Reservation Confirmed")
+                        }
+                        .disabled(name.isEmpty)
+                    }
                 }
                 .scrollContentBackground(.hidden)
                 .background(Color.clear)
