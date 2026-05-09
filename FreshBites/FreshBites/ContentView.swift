@@ -21,6 +21,10 @@ struct ContentView: View {
                         AboutView()
                     }
                     .buttonStyle(.borderedProminent)
+                    NavigationLink("View Menu") {
+                        MenuView()
+                    }
+                    .buttonStyle(.borderedProminent)
                     
                     NavigationLink("Make a reservation") {
                         ReservationForm()

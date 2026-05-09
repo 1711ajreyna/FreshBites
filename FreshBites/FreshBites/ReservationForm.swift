@@ -109,7 +109,6 @@ struct ReservationForm: View {
                             }
                         }
                     }
-                    
                     Section {
                         Button("Confirm Reservation") {
                             reservationConfirmed = true
@@ -126,7 +125,7 @@ struct ReservationForm: View {
                 .scrollContentBackground(.hidden)
                 .background(Color.clear)
                 .cornerRadius(15)
-                .padding()
+                .padding(.horizontal)
             }
             .padding()
         }
