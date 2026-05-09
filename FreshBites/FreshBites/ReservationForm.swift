@@ -13,10 +13,10 @@ struct ReservationForm: View {
     @State private var numberOfGuests = 1
     @State private var numberOfChildren = 0
     @State private var occasion = ""
+    @State private var outdoorSeating = false
     @State private var reservationConfirmed = false
     
     var body: some View {
-        
         ZStack {
             LinearGradient(
                 colors: [.green.opacity(0.3), .yellow.opacity(0.2)],
@@ -25,47 +25,93 @@ struct ReservationForm: View {
             )
             .ignoresSafeArea()
             
-            VStack(spacing:25) {
-                Text("Reservation Form").font(.largeTitle).fontWeight(.bold)
+            VStack(spacing: 25) {
+                Text("Reservation Form")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
                 Form {
-                    
-                    Section(header: Text("Guest Information")){
+                    Section(header: Text("Guest Information")) {
                         TextField("Name", text: $name)
                         
                         TextField("Phone Number", text: $phoneNumber)
                             .keyboardType(.phonePad)
                     }
-                    Section(header: Text("Reservation Details")){
+                    
+                    Section(header: Text("Reservation Details")) {
                         Stepper("Guests: \(numberOfGuests)", value: $numberOfGuests, in: 1...20)
                         
                         Stepper("Children: \(numberOfChildren)", value: $numberOfChildren, in: 0...5)
                         
-                        TextField("Occasion (Birthday, Anniversary, etc.)", text: $occasion)
+                        TextField("Occasion", text: $occasion)
+                        
+                        Toggle("Outdoor Seating", isOn: $outdoorSeating)
                     }
                     
-                    Section{
-                        if name.isEmpty || phoneNumber.isEmpty {
-                            Text("Please enter your name and phone number.")
+                    Section(header: Text("Messages")) {
+                        if name.isEmpty {
+                            Text("Please enter your name.")
                                 .foregroundColor(.red)
                         }
                         
                         if numberOfGuests >= 8 {
-                            Text("Large group - please call ahead.")
+                            Text("Large group — please call ahead.")
                                 .foregroundColor(.orange)
+                        }
+                        
+                        if outdoorSeating {
+                            Text("Outdoor seating requested.")
+                                .foregroundColor(.green)
                         }
                         
                         if numberOfChildren > 0 {
                             Text("Children's menus and high chairs are available.")
                                 .foregroundColor(.green)
                         }
-                        
-                        Text("Reservation for \(numberOfGuests) guests and \(numberOfChildren) children. Occasion: \(occasion)")
-                            .padding(.vertical)
+                    }
+                    
+                    Section(header: Text("Summary")) {
+                        VStack(spacing: 10) {
+                            HStack {
+                                Text("Name:")
+                                Spacer()
+                                Text(name.isEmpty ? "Not entered" : name)
+                            }
+                            
+                            HStack {
+                                Text("Phone:")
+                                Spacer()
+                                Text(phoneNumber.isEmpty ? "Not entered" : phoneNumber)
+                            }
+                            
+                            HStack {
+                                Text("Guests:")
+                                Spacer()
+                                Text("\(numberOfGuests)")
+                            }
+                            
+                            HStack {
+                                Text("Children:")
+                                Spacer()
+                                Text("\(numberOfChildren)")
+                            }
+                            
+                            HStack {
+                                Text("Occasion:")
+                                Spacer()
+                                Text(occasion.isEmpty ? "None" : occasion)
+                            }
+                            
+                            HStack {
+                                Text("Outdoor:")
+                                Spacer()
+                                Text(outdoorSeating ? "Yes" : "No")
+                            }
+                        }
                     }
                     
                     Section {
-                        
-                        Button("Confirm Reservation"){
+                        Button("Confirm Reservation") {
                             reservationConfirmed = true
                         }
                         .disabled(name.isEmpty)
