@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		940C85C02FAC3EF3002389A1 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C85BF2FAC3EF3002389A1 /* AboutView.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		940C85962FAC221B002389A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -31,7 +27,6 @@
 		940C85872FAC221A002389A1 /* FreshBites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshBites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		940C85952FAC221B002389A1 /* FreshBitesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshBitesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		940C859F2FAC221B002389A1 /* FreshBitesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshBitesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		940C85BF2FAC3EF3002389A1 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -80,7 +75,6 @@
 		940C857E2FAC221A002389A1 = {
 			isa = PBXGroup;
 			children = (
-				940C85BF2FAC3EF3002389A1 /* AboutView.swift */,
 				940C85892FAC221A002389A1 /* FreshBites */,
 				940C85982FAC221B002389A1 /* FreshBitesTests */,
 				940C85A22FAC221B002389A1 /* FreshBitesUITests */,
@@ -242,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				940C85C02FAC3EF3002389A1 /* AboutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
