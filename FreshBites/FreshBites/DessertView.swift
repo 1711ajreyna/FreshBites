@@ -23,7 +23,9 @@ struct DessertView: View {
     
     var body: some View {
         NavigationStack {
+            
             ZStack {
+                
                 LinearGradient(
                     colors: [.green.opacity(0.3), .yellow.opacity(0.2)],
                     startPoint: .topLeading,
@@ -32,6 +34,7 @@ struct DessertView: View {
                 .ignoresSafeArea()
                 
                 VStack(spacing: 20) {
+                    
                     FreshBitesBanner()
                     
                     Text("Dessert Menu")
@@ -39,11 +42,31 @@ struct DessertView: View {
                         .fontWeight(.bold)
                     
                     List {
-                        ForEach(sortedDesserts, id: \.key) { dessert in
-                            HStack {
-                                Text(dessert.key)
-                                Spacer()
-                                Text("$\(dessert.value, specifier: "%.2f")")
+                        
+                        Section(
+                            header: Text("Showing \(sortedDesserts.count) desserts")
+                                .font(.headline)
+                        ) {
+                            
+                            ForEach(sortedDesserts, id: \.key) { dessert in
+                                
+                                HStack {
+                                    
+                                    VStack(alignment: .leading) {
+                                        
+                                        Text(dessert.key)
+                                        
+                                        Text("Dessert")
+                                            .font(.caption)
+                                            .padding(5)
+                                            .background(Color.pink.opacity(0.3))
+                                            .cornerRadius(8)
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    Text("$\(dessert.value, specifier: "%.2f")")
+                                }
                             }
                         }
                     }

@@ -11,7 +11,7 @@ struct MenuView: View {
     
     @State private var showDesserts = false
     
-    let menuItems: [String : Double] = [
+    let menuItems: [String: Double] = [
         "Chicken Salad": 12.99,
         "Turkey Sandwich": 10.99,
         "Veggie Wrap": 9.99,
@@ -25,31 +25,46 @@ struct MenuView: View {
     }
     
     var body: some View {
-        
-        VStack(spacing: 15) {
+        ZStack {
+            LinearGradient(
+                colors: [.green.opacity(0.3), .yellow.opacity(0.2)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
             
-            Button("View Desserts") {
-                showDesserts = true
-            }
-            .foregroundColor(.black)
-            .buttonStyle(.borderedProminent)
-            
-            List {
+            VStack(spacing: 15) {
                 
-                Section {
-                    ForEach(sortedMenuItems, id: \.key) { item in
-                        HStack {
-                            Text(item.key)
-                            
-                            Spacer()
-                            
-                            Text("$\(item.value, specifier: "%.2f")")
+                FreshBitesBanner()
+                
+                Button("View Desserts") {
+                    showDesserts = true
+                }
+                .foregroundColor(.black)
+                .buttonStyle(.borderedProminent)
+                
+                List {
+                    Section(header: Text("Showing \(sortedMenuItems.count) items")) {
+                        ForEach(sortedMenuItems, id: \.key) { item in
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(item.key)
+                                    
+                                    Text(item.value >= 10 ? "Premium" : "Regular")
+                                        .font(.caption)
+                                        .padding(5)
+                                        .background(item.value >= 10 ? Color.orange.opacity(0.3) : Color.green.opacity(0.3))
+                                        .cornerRadius(8)
+                                }
+                                
+                                Spacer()
+                                
+                                Text("$\(item.value, specifier: "%.2f")")
+                            }
                         }
                     }
-                }
-                
-                Section {
-                    VStack {
+                    
+                    Section {
                         HStack {
                             Text("Total items:")
                                 .fontWeight(.bold)
@@ -60,7 +75,10 @@ struct MenuView: View {
                         }
                     }
                 }
+                .scrollContentBackground(.hidden)
+                .background(Color.clear)
             }
+            .padding()
         }
         .sheet(isPresented: $showDesserts) {
             DessertView()

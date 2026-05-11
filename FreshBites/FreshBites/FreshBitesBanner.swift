@@ -10,7 +10,7 @@ import SwiftUI
 struct FreshBitesBanner: View {
     var body: some View {
         VStack(spacing : 6) {
-            Image(systemName: ".fork.knife.circle.fill")
+            Image(systemName: "fork.knife.circle.fill")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 70, height: 70)
