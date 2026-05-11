@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MenuView: View {
+    
+    @State private var showDesserts = false
+    
     let menuItems: [String : Double] = [
         "Chicken Salad": 12.99,
         "Turkey Sandwich": 10.99,
@@ -18,31 +21,49 @@ struct MenuView: View {
     ]
     
     var sortedMenuItems: [(key: String, value: Double)] {
-        menuItems.sorted{ $0.key < $1.key }
+        menuItems.sorted { $0.key < $1.key }
     }
+    
     var body: some View {
-        List {
-            Section {
-                ForEach(sortedMenuItems, id: \.key) { item in
-                    HStack {
-                        Text(item.key)
-                        Spacer()
-                        Text("$\(item.value, specifier: "%.2f")")
+        
+        VStack(spacing: 15) {
+            
+            Button("View Desserts") {
+                showDesserts = true
+            }
+            .foregroundColor(.black)
+            .buttonStyle(.borderedProminent)
+            
+            List {
+                
+                Section {
+                    ForEach(sortedMenuItems, id: \.key) { item in
+                        HStack {
+                            Text(item.key)
+                            
+                            Spacer()
+                            
+                            Text("$\(item.value, specifier: "%.2f")")
+                        }
+                    }
+                }
+                
+                Section {
+                    VStack {
+                        HStack {
+                            Text("Total items:")
+                                .fontWeight(.bold)
+                            
+                            Spacer()
+                            
+                            Text("\(menuItems.count)")
+                        }
                     }
                 }
             }
-            Section {
-                VStack {
-                    HStack{
-                        Text("Total items:")
-                            .fontWeight(.bold)
-                        
-                        Spacer()
-                        
-                        Text("\(menuItems.count)")
-                    }
-                }
-            }
+        }
+        .sheet(isPresented: $showDesserts) {
+            DessertView()
         }
         .navigationTitle("Menu")
     }
