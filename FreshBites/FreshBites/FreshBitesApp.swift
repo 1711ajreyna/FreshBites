@@ -2,8 +2,10 @@
 //  FreshBitesApp.swift
 //  FreshBites
 //
-//  Created by Andrew Reyna on 5/6/26.
+//  Created by Andrew Reyna on 5/13/26.
 //
+
+import SwiftUI
 
 import SwiftUI
 

@@ -1,8 +1,14 @@
+//
+//  ContentView.swift
+//  FreshBites
+//
+//  Created by Andrew Reyna on 5/13/26.
+//
+
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
         NavigationStack {
             ZStack {
                 LinearGradient(
@@ -11,26 +17,37 @@ struct ContentView: View {
                     endPoint: .bottomTrailing
                 )
                 .ignoresSafeArea()
-                
-                VStack(spacing: 25) {
-                    Text("FreshBites")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                    
-                    NavigationLink("About FreshBites") {
-                        AboutView()
-                    }
-                    .buttonStyle(.borderedProminent)
+
+                VStack(spacing: 20) {
+
+                    FreshBitesBanner()
+
                     NavigationLink("View Menu") {
                         MenuView()
                     }
                     .buttonStyle(.borderedProminent)
-                    
-                    NavigationLink("Make a reservation") {
+
+                    NavigationLink("View Desserts") {
+                        DessertView()
+                    }
+                    .buttonStyle(.bordered)
+
+                    NavigationLink("Customers") {
+                        CustomerListView()
+                    }
+                    .buttonStyle(.bordered)
+
+                    NavigationLink("Reservations") {
                         ReservationForm()
                     }
-                    .buttonStyle(.borderedProminent)
+                    .buttonStyle(.bordered)
+
+                    NavigationLink("About FreshBites") {
+                        AboutView()
+                    }
+                    .buttonStyle(.bordered)
                 }
+                .padding()
             }
         }
     }

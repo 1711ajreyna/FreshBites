@@ -6,6 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		940C85F32FB55D8E002389A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C85F22FB55D8E002389A1 /* ContentView.swift */; };
+		940C85F52FB55DC6002389A1 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C85F42FB55DC6002389A1 /* AboutView.swift */; };
+		940C85F72FB55DD5002389A1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C85F62FB55DD5002389A1 /* MenuView.swift */; };
+		940C85F92FB55DF6002389A1 /* DessertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C85F82FB55DF6002389A1 /* DessertView.swift */; };
+		940C85FB2FB55E07002389A1 /* ReservationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C85FA2FB55E07002389A1 /* ReservationForm.swift */; };
+		940C85FD2FB55E20002389A1 /* CustomerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C85FC2FB55E20002389A1 /* CustomerListView.swift */; };
+		940C85FF2FB55E3C002389A1 /* FreshBitesBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C85FE2FB55E3C002389A1 /* FreshBitesBanner.swift */; };
+		940C86012FB55E59002389A1 /* MenuCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C86002FB55E59002389A1 /* MenuCartView.swift */; };
+		940C86032FB55E8D002389A1 /* MenuItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C86022FB55E8D002389A1 /* MenuItemRowView.swift */; };
+		940C86052FB55EA4002389A1 /* PremiumBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C86042FB55EA4002389A1 /* PremiumBadge.swift */; };
+		940C86072FB55EC1002389A1 /* CustomerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C86062FB55EC1002389A1 /* CustomerRowView.swift */; };
+		940C860B2FB56021002389A1 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C860A2FB56021002389A1 /* Customer.swift */; };
+		940C860D2FB560F4002389A1 /* MenuSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C860C2FB560F4002389A1 /* MenuSectionHeaderView.swift */; };
+		940C860F2FB56212002389A1 /* DessertHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C860E2FB56212002389A1 /* DessertHeaderView.swift */; };
+		940C86112FB56A9E002389A1 /* HomeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C86102FB56A9E002389A1 /* HomeMenuView.swift */; };
+		940C86132FB56C11002389A1 /* FreshBitesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C86122FB56C11002389A1 /* FreshBitesApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		940C85962FAC221B002389A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +46,26 @@
 		940C85872FAC221A002389A1 /* FreshBites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshBites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		940C85952FAC221B002389A1 /* FreshBitesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshBitesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		940C859F2FAC221B002389A1 /* FreshBitesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshBitesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		940C85EC2FB55952002389A1 /* FreshBites.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FreshBites.xcodeproj; sourceTree = "<group>"; };
+		940C85F22FB55D8E002389A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		940C85F42FB55DC6002389A1 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		940C85F62FB55DD5002389A1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		940C85F82FB55DF6002389A1 /* DessertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertView.swift; sourceTree = "<group>"; };
+		940C85FA2FB55E07002389A1 /* ReservationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationForm.swift; sourceTree = "<group>"; };
+		940C85FC2FB55E20002389A1 /* CustomerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListView.swift; sourceTree = "<group>"; };
+		940C85FE2FB55E3C002389A1 /* FreshBitesBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshBitesBanner.swift; sourceTree = "<group>"; };
+		940C86002FB55E59002389A1 /* MenuCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCartView.swift; sourceTree = "<group>"; };
+		940C86022FB55E8D002389A1 /* MenuItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemRowView.swift; sourceTree = "<group>"; };
+		940C86042FB55EA4002389A1 /* PremiumBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumBadge.swift; sourceTree = "<group>"; };
+		940C86062FB55EC1002389A1 /* CustomerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRowView.swift; sourceTree = "<group>"; };
+		940C860A2FB56021002389A1 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		940C860C2FB560F4002389A1 /* MenuSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSectionHeaderView.swift; sourceTree = "<group>"; };
+		940C860E2FB56212002389A1 /* DessertHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertHeaderView.swift; sourceTree = "<group>"; };
+		940C86102FB56A9E002389A1 /* HomeMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuView.swift; sourceTree = "<group>"; };
+		940C86122FB56C11002389A1 /* FreshBitesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshBitesApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		940C85892FAC221A002389A1 /* FreshBites */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FreshBites;
-			sourceTree = "<group>";
-		};
 		940C85982FAC221B002389A1 /* FreshBitesTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FreshBitesTests;
@@ -75,7 +106,8 @@
 		940C857E2FAC221A002389A1 = {
 			isa = PBXGroup;
 			children = (
-				940C85892FAC221A002389A1 /* FreshBites */,
+				940C85EC2FB55952002389A1 /* FreshBites.xcodeproj */,
+				940C85EB2FB558C0002389A1 /* FreshBites */,
 				940C85982FAC221B002389A1 /* FreshBitesTests */,
 				940C85A22FAC221B002389A1 /* FreshBitesUITests */,
 				940C85882FAC221A002389A1 /* Products */,
@@ -89,6 +121,34 @@
 				940C85952FAC221B002389A1 /* FreshBitesTests.xctest */,
 				940C859F2FAC221B002389A1 /* FreshBitesUITests.xctest */,
 			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		940C85EB2FB558C0002389A1 /* FreshBites */ = {
+			isa = PBXGroup;
+			children = (
+				940C85F22FB55D8E002389A1 /* ContentView.swift */,
+				940C85F42FB55DC6002389A1 /* AboutView.swift */,
+				940C85F62FB55DD5002389A1 /* MenuView.swift */,
+				940C85F82FB55DF6002389A1 /* DessertView.swift */,
+				940C85FA2FB55E07002389A1 /* ReservationForm.swift */,
+				940C85FC2FB55E20002389A1 /* CustomerListView.swift */,
+				940C85FE2FB55E3C002389A1 /* FreshBitesBanner.swift */,
+				940C86002FB55E59002389A1 /* MenuCartView.swift */,
+				940C86022FB55E8D002389A1 /* MenuItemRowView.swift */,
+				940C86042FB55EA4002389A1 /* PremiumBadge.swift */,
+				940C86062FB55EC1002389A1 /* CustomerRowView.swift */,
+				940C860A2FB56021002389A1 /* Customer.swift */,
+				940C860C2FB560F4002389A1 /* MenuSectionHeaderView.swift */,
+				940C860E2FB56212002389A1 /* DessertHeaderView.swift */,
+				940C86102FB56A9E002389A1 /* HomeMenuView.swift */,
+				940C86122FB56C11002389A1 /* FreshBitesApp.swift */,
+			);
+			path = FreshBites;
+			sourceTree = "<group>";
+		};
+		940C85ED2FB55952002389A1 /* Products */ = {
+			isa = PBXGroup;
 			name = Products;
 			sourceTree = "<group>";
 		};
@@ -106,9 +166,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				940C85892FAC221A002389A1 /* FreshBites */,
 			);
 			name = FreshBites;
 			packageProductDependencies = (
@@ -175,6 +232,7 @@
 				TargetAttributes = {
 					940C85862FAC221A002389A1 = {
 						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
 					};
 					940C85942FAC221B002389A1 = {
 						CreatedOnToolsVersion = 16.4;
@@ -198,6 +256,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 940C85882FAC221A002389A1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 940C85ED2FB55952002389A1 /* Products */;
+					ProjectRef = 940C85EC2FB55952002389A1 /* FreshBites.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				940C85862FAC221A002389A1 /* FreshBites */,
@@ -236,6 +300,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940C860F2FB56212002389A1 /* DessertHeaderView.swift in Sources */,
+				940C85F52FB55DC6002389A1 /* AboutView.swift in Sources */,
+				940C86112FB56A9E002389A1 /* HomeMenuView.swift in Sources */,
+				940C85FB2FB55E07002389A1 /* ReservationForm.swift in Sources */,
+				940C85FD2FB55E20002389A1 /* CustomerListView.swift in Sources */,
+				940C860D2FB560F4002389A1 /* MenuSectionHeaderView.swift in Sources */,
+				940C860B2FB56021002389A1 /* Customer.swift in Sources */,
+				940C85FF2FB55E3C002389A1 /* FreshBitesBanner.swift in Sources */,
+				940C85F92FB55DF6002389A1 /* DessertView.swift in Sources */,
+				940C85F72FB55DD5002389A1 /* MenuView.swift in Sources */,
+				940C85F32FB55D8E002389A1 /* ContentView.swift in Sources */,
+				940C86052FB55EA4002389A1 /* PremiumBadge.swift in Sources */,
+				940C86032FB55E8D002389A1 /* MenuItemRowView.swift in Sources */,
+				940C86072FB55EC1002389A1 /* CustomerRowView.swift in Sources */,
+				940C86132FB56C11002389A1 /* FreshBitesApp.swift in Sources */,
+				940C86012FB55E59002389A1 /* MenuCartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FreshBites/FreshBites.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
@@ -414,6 +494,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.5;
@@ -425,7 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FreshBites/FreshBites.entitlements;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
