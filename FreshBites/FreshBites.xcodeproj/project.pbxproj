@@ -23,6 +23,7 @@
 		940C860F2FB56212002389A1 /* DessertHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C860E2FB56212002389A1 /* DessertHeaderView.swift */; };
 		940C86112FB56A9E002389A1 /* HomeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C86102FB56A9E002389A1 /* HomeMenuView.swift */; };
 		940C86132FB56C11002389A1 /* FreshBitesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C86122FB56C11002389A1 /* FreshBitesApp.swift */; };
+		940C86162FB8FABB002389A1 /* in.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C86152FB8FABB002389A1 /* in.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		940C85872FAC221A002389A1 /* FreshBites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshBites.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		940C85952FAC221B002389A1 /* FreshBitesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshBitesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		940C859F2FAC221B002389A1 /* FreshBitesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshBitesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		940C85872FAC221A002389A1 /* FreshBites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FreshBites.app; path = /Users/andrewreyna/Desktop/FreshBites/build/Debug/FreshBites.app; sourceTree = "<absolute>"; };
+		940C85952FAC221B002389A1 /* FreshBitesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FreshBitesTests.xctest; path = /Users/andrewreyna/Desktop/FreshBites/build/Debug/FreshBites.app/Contents/PlugIns/FreshBitesTests.xctest; sourceTree = "<absolute>"; };
+		940C859F2FAC221B002389A1 /* FreshBitesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FreshBitesUITests.xctest; path = "/Users/andrewreyna/Desktop/FreshBites/build/Debug/FreshBitesUITests-Runner.app/Contents/PlugIns/FreshBitesUITests.xctest"; sourceTree = "<absolute>"; };
 		940C85EC2FB55952002389A1 /* FreshBites.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FreshBites.xcodeproj; sourceTree = "<group>"; };
 		940C85F22FB55D8E002389A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		940C85F42FB55DC6002389A1 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		940C860E2FB56212002389A1 /* DessertHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertHeaderView.swift; sourceTree = "<group>"; };
 		940C86102FB56A9E002389A1 /* HomeMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuView.swift; sourceTree = "<group>"; };
 		940C86122FB56C11002389A1 /* FreshBitesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshBitesApp.swift; sourceTree = "<group>"; };
+		940C86152FB8FABB002389A1 /* in.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = in.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -110,18 +112,8 @@
 				940C85EB2FB558C0002389A1 /* FreshBites */,
 				940C85982FAC221B002389A1 /* FreshBitesTests */,
 				940C85A22FAC221B002389A1 /* FreshBitesUITests */,
-				940C85882FAC221A002389A1 /* Products */,
+				940C86152FB8FABB002389A1 /* in.swift */,
 			);
-			sourceTree = "<group>";
-		};
-		940C85882FAC221A002389A1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				940C85872FAC221A002389A1 /* FreshBites.app */,
-				940C85952FAC221B002389A1 /* FreshBitesTests.xctest */,
-				940C859F2FAC221B002389A1 /* FreshBitesUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		940C85EB2FB558C0002389A1 /* FreshBites */ = {
@@ -254,7 +246,7 @@
 			mainGroup = 940C857E2FAC221A002389A1;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 940C85882FAC221A002389A1 /* Products */;
+			productRefGroup = 940C857E2FAC221A002389A1;
 			projectDirPath = "";
 			projectReferences = (
 				{
@@ -323,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940C86162FB8FABB002389A1 /* in.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
